@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSP: solo permite scripts del mismo origen y del CDN de Tailwind.
+         Bloquea inline scripts, eval y recursos externos no autorizados. -->
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src 'self';
+                   script-src 'self' https://cdn.tailwindcss.com;
+                   style-src  'self' 'unsafe-inline' https://cdn.tailwindcss.com;
+                   img-src    'self' data:;
+                   connect-src 'none';
+                   object-src  'none';
+                   base-uri    'self';">
+    <title>Organigrama SDSGE - Reestructura</title>
+    <!-- Aplicar tema antes del primer render para evitar flash -->
+    <script>
+        (function(){
+            var s = localStorage.getItem('oc-theme');
+            var p = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+            document.documentElement.dataset.theme = s || p;
+        })();
+    </script>
+    <!-- Tailwind CDN (solo para desarrollo/visualización local).
+         Para producción, reemplazar por un build local con: npx tailwindcss build -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="orgchart.css">
+</head>
+<body class="min-h-screen text-white">
+
+    <!-- Header -->
+    <header class="theme-header sticky top-0 z-50 backdrop-blur-md border-b">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between gap-3">
+            <div class="min-w-0">
+                <h1 class="text-lg sm:text-2xl font-bold bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent leading-tight">
+                    Organigrama DCE
+                </h1>
+                <p class="text-xs hidden sm:block" style="color:var(--theme-muted)">Dirección de Cartografía Electoral</p>
+            </div>
+            <div class="flex items-center gap-2 flex-shrink-0">
+                <button id="btn-expand-all" class="theme-btn px-2.5 py-1.5 text-xs rounded-lg transition-colors border whitespace-nowrap">
+                    Expandir Todo
+                </button>
+                <button id="btn-collapse-all" class="theme-btn px-2.5 py-1.5 text-xs rounded-lg transition-colors border whitespace-nowrap">
+                    Colapsar Todo
+                </button>
+                <!-- Toggle dark/light -->
+                <button id="btn-theme" aria-label="Cambiar tema" title="Cambiar tema">
+                    <!-- Ícono SVG: se actualiza por JS -->
+                    <svg id="theme-icon-dark" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                    </svg>
+                    <svg id="theme-icon-light" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:none">
+                        <circle cx="12" cy="12" r="5"/>
+                        <line x1="12" y1="1" x2="12" y2="3"/>
+                        <line x1="12" y1="21" x2="12" y2="23"/>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                        <line x1="1" y1="12" x2="3" y2="12"/>
+                        <line x1="21" y1="12" x2="23" y2="12"/>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Legend -->
+    <div class="max-w-7xl mx-auto px-4 py-2">
+        <div class="flex flex-wrap gap-2 justify-center">
+            <div class="theme-legend-item legend-item flex items-center gap-1.5 px-2.5 py-1 rounded-full border text-xs whitespace-nowrap">
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 flex-shrink-0"></span>
+                <span style="color:var(--theme-muted)">DESPEN — Sin cambio</span>
+            </div>
+            <div class="theme-legend-item legend-item flex items-center gap-1.5 px-2.5 py-1 rounded-full border text-xs whitespace-nowrap">
+                <span class="w-2.5 h-2.5 rounded-full bg-amber-500 flex-shrink-0"></span>
+                <span style="color:var(--theme-muted)">RA → RA — Cambio dentro de RA</span>
+            </div>
+            <div class="theme-legend-item legend-item flex items-center gap-1.5 px-2.5 py-1 rounded-full border text-xs whitespace-nowrap">
+                <span class="w-2.5 h-2.5 rounded-full bg-cyan-500 flex-shrink-0"></span>
+                <span style="color:var(--theme-muted)">HE → RA — Honorarios a RA</span>
+            </div>
+            <div class="theme-legend-item legend-item flex items-center gap-1.5 px-2.5 py-1 rounded-full border text-xs whitespace-nowrap">
+                <span class="w-2.5 h-2.5 rounded-full bg-pink-500 flex-shrink-0"></span>
+                <span style="color:var(--theme-muted)">Nuevo Puesto — Propuesto</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Org Chart Container -->
+    <main class="w-full px-0 py-6 overflow-x-auto">
+        <div id="orgchart" class="orgchart-container">
+            <!-- Rendered by JS -->
+        </div>
+    </main>
+
+    <!-- Detail Modal -->
+    <div id="modal-overlay" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/60 backdrop-blur-sm p-4">
+        <div id="modal-content" class="rounded-2xl shadow-2xl max-w-lg w-full p-6 transform scale-95 opacity-0 transition-all duration-300">
+            <div class="flex items-center justify-between mb-4">
+                <h3 id="modal-title" class="text-lg font-bold"></h3>
+                <button id="modal-close" class="transition-colors text-2xl leading-none" style="color:var(--theme-muted)">&times;</button>
+            </div>
+            <div id="modal-body" class="space-y-3 text-sm"></div>
+        </div>
+    </div>
+
+    <!-- datos.js expone window.__ORG__ con el contenido del CSV -->
+    <script src="datos.js"></script>
+    <script src="orgchart.js"></script>
+</body>
+</html>

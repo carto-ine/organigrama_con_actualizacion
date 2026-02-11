@@ -1,0 +1,46 @@
+// ============================================
+// DATOS DEL ORGANIGRAMA
+//
+// Edita el CSV entre los backticks cuando cambien los datos.
+// El campo parent_id indica el id del nodo padre directo.
+// Déjalo vacío solo en la raíz (id=1).
+//
+// Columnas:
+//   id           – identificador numérico único de la fila
+//   jerarquia    – nivel en el organigrama (1=raíz)
+//   pertenecia   – clave del departamento (SDSGE, DDHG, DAGG…)
+//   jefe_directo – nombre del responsable del puesto (solo referencia visual)
+//   puesto_actual– nombre completo del puesto
+//   tipo         – DESPEN | HE | RA
+//   cambio       – 0=sin cambio, 1=cambia
+//   donde        – destino del cambio (N/A si no aplica)
+//   nuevo_puesto – nombre del nuevo puesto (Sin cambio si no aplica)
+//   nivel_tabular– clave tabular (XXX si no aplica)
+//   parent_id    – id del nodo padre (vacío solo en la raíz)
+// ============================================
+;(function () {
+    window.__ORG__ = Object.freeze({
+        csv: `id,jerarquia,pertenecia,jefe_directo,puesto_actual,tipo,cambio,donde,nuevo_puesto,nivel_tabular,parent_id
+1,1,DCE,ojeda,Dirección de Cartografía Electoral,DESPEN,0,N/A,Sin cambio,XXX,
+2,2,SDSGE,benjamín,Subdirección De Desarrollo De Sistemas Geográficos Electorales,DESPEN,0,N/A,Sin cambio,XXX,1
+3,4,DCE,benjamín,Gestora Administrativa,RA,0,N/A,Sin cambio,XXX,1
+4,4,DCE,benjamín,Asistente Informatica de Enlace,RA,0,N/A,Sin cambio,XXX,1
+5,4,DCE,benjamín,Secretaria de Dirección de Área o Equivalente,RA,0,N/A,Sin cambio,XXX,1
+6,4,DCE,benjamín,Especialista en Implementación de los Procesos y Servicios Cartograficos,HE,1,RA,Abogado de Procedimientos Administrativos,KA3,1
+7,3,SDSGE,luis,Jefe De Departamento De Desarrollo De Herramientas Geoelectorales,DESPEN,0,N/A,Sin cambio,XXX,2
+8,3,SDSGE,luis,Jefe De Departamento De Aplicación Geodésica Y Geomática,DESPEN,0,N/A,Sin cambio,XXX,2
+9,3,SDSGE,luis,Líder De Migración De Bases Geográficas Digitales,HE,1,RA,Jefe de Departamento de Demarcaciones y SGC,LC4,2
+10,4,DDHG,arthur,Líder De Análisis Y Calidad De Software Cartográfico,HE,1,RA,Coordinador de Sistemas Cloud,LC2,7
+11,4,DDHG,arthur,Líder De Análisis Y Calidad De Software Cartográfico,HE,1,RA,Coodinador de Sistemas Geoespaciales,LC2,7
+12,4,DDHG,arthur,Desarrollador De Sistemas Cartográficos De Consulta en Alto Volumen,HE,1,RA,Coordinador de Integración y Sistemas Transversales,LC2,7
+13,4,DAGG,gerzain,Líder De Análisis Y Calidad De Software Cartográfico,HE,1,RA,Coordinador de Sistemas de Actualización Cartográfica,LC2,8
+14,5,DDHG,javier,Desarrollador De Sistemas Cartográficos De Consulta en Alto Volumen,HE,1,RA,Nuevo Puesto,KC1,10
+15,5,DDHG,javier,Programador Middle En Sistemas Cartográficos Electorales,HE,1,RA,Nuevo Puesto,KC1,10
+16,5,DDHG,javier,Técnico En Desarrollo Y Administración De Base De Datos Geoelectorales,RA,1,RA,Nuevo Puesto,KA1,10
+17,5,DDHG,eduardo,Programador De Sistemas De Información Geográfico Electorales,HE,1,RA,Nuevo Puesto,KC1,11
+18,5,DDHG,eduardo,Asistente En Supervisión De Información Geográfica Electoral,RA,1,RA,Nuevo Puesto,KA1,11
+19,5,DDHG,erick,Técnico Especialista En Pruebas Usuarias A Sistemas Cartográficos,HE,1,RA,Nuevo Puesto,KC1,12
+20,5,DDHG,erick,Técnico De Aplicaciones Geoelectorales,RA,1,RA,Nuevo Puesto,KA1,12
+21,4,DDHG,arthur,Documentador Y Diseñador UX/UI,HE,1,RA,Nuevo Puesto,KC1,7`
+    });
+})();

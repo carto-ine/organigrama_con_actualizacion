@@ -1,0 +1,520 @@
+/* ============================================
+   ORGANIGRAMA SDSGE - Layout horizontal clásico
+   ============================================ */
+
+/* --- Reset & Base --- */
+*, *::before, *::after { box-sizing: border-box; }
+
+/* ============================================================
+   TEMAS — dark (default) / light
+   Controlados por [data-theme] en <html>
+   ============================================================ */
+:root,
+[data-theme="dark"] {
+    --theme-bg-from:   #0f172a;
+    --theme-bg-via:    #1e293b;
+    --theme-bg-to:     #0f172a;
+    --theme-text:      #f1f5f9;
+    --theme-muted:     #94a3b8;
+    --theme-header-bg: rgba(15,23,42,.8);
+    --theme-border:    rgba(148,163,184,.5);
+    --theme-modal-bg:  #1e293b;
+    --theme-modal-border: #475569;
+    --theme-card-border: rgba(148,163,184,.15);
+    --theme-toggle-bg: rgba(15,23,42,.5);
+    --theme-scrollbar-track: rgba(15,23,42,.5);
+    --theme-btn-bg:    rgba(51,65,85,1);   /* slate-700 */
+    --theme-btn-hover: rgba(71,85,105,1);  /* slate-600 */
+    --theme-btn-border:rgba(100,116,139,1);
+    --theme-legend-bg: rgba(30,41,59,.6);
+}
+[data-theme="light"] {
+    --theme-bg-from:   #f8fafc;
+    --theme-bg-via:    #e2e8f0;
+    --theme-bg-to:     #f1f5f9;
+    --theme-text:      #0f172a;
+    --theme-muted:     #475569;
+    --theme-header-bg: rgba(248,250,252,.92);
+    --theme-border:    rgba(100,116,139,.35);
+    --theme-modal-bg:  #ffffff;
+    --theme-modal-border: #cbd5e1;
+    --theme-card-border: rgba(100,116,139,.25);
+    --theme-toggle-bg: rgba(241,245,249,.8);
+    --theme-scrollbar-track: rgba(226,232,240,.8);
+    --theme-btn-bg:    rgba(226,232,240,1);
+    --theme-btn-hover: rgba(203,213,225,1);
+    --theme-btn-border:rgba(148,163,184,1);
+    --theme-legend-bg: rgba(241,245,249,.8);
+}
+
+/* Fondo del body según tema */
+body {
+    background: linear-gradient(135deg, var(--theme-bg-from), var(--theme-bg-via), var(--theme-bg-to));
+    color: var(--theme-text);
+    min-height: 100vh;
+}
+
+/* Header */
+.theme-header {
+    background: var(--theme-header-bg);
+    border-bottom-color: var(--theme-border);
+}
+.theme-btn {
+    background: var(--theme-btn-bg);
+    border-color: var(--theme-btn-border);
+    color: var(--theme-text);
+}
+.theme-btn:hover { background: var(--theme-btn-hover); }
+
+/* Botón toggle tema */
+#btn-theme {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    background: var(--theme-btn-bg);
+    border: 1px solid var(--theme-btn-border);
+    color: var(--theme-text);
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s;
+    flex-shrink: 0;
+}
+#btn-theme:hover { background: var(--theme-btn-hover); }
+
+/* Legend */
+.theme-legend-item {
+    background: var(--theme-legend-bg);
+    border-color: var(--theme-border);
+}
+
+/* Modal */
+#modal-content {
+    background: var(--theme-modal-bg) !important;
+    border-color: var(--theme-modal-border) !important;
+    color: var(--theme-text);
+}
+#modal-title { color: var(--theme-text); }
+.modal-value { color: var(--theme-text) !important; }
+[data-theme="light"] .modal-label { color: #64748b; }
+
+/* Cards en modo claro */
+[data-theme="light"] .oc-card {
+    border-color: var(--theme-card-border);
+}
+[data-theme="light"] .oc-title { color: #0f172a; }
+[data-theme="light"] .oc-card.type-despen {
+    background: linear-gradient(135deg, rgba(16,185,129,.10), rgba(6,78,59,.08));
+}
+[data-theme="light"] .oc-card.type-ra {
+    background: linear-gradient(135deg, rgba(245,158,11,.10), rgba(120,53,15,.08));
+}
+[data-theme="light"] .oc-card.type-he {
+    background: linear-gradient(135deg, rgba(6,182,212,.10), rgba(8,51,68,.08));
+}
+[data-theme="light"] .jefe-tag {
+    background: rgba(99,102,241,.10);
+    color: #4f46e5;
+    border-color: rgba(99,102,241,.25);
+}
+[data-theme="light"] .dept-tag {
+    background: rgba(100,116,139,.12);
+    color: #334155;
+    border-color: rgba(100,116,139,.3);
+}
+[data-theme="light"] .nivel-badge {
+    background: rgba(100,116,139,.12);
+    color: #334155;
+    border-color: rgba(100,116,139,.3);
+}
+[data-theme="light"] .change-badge {
+    background: rgba(139,92,246,.12);
+    color: #6d28d9;
+    border-color: rgba(139,92,246,.25);
+}
+[data-theme="light"] .nuevo-puesto-tag {
+    background: rgba(236,72,153,.12);
+    color: #9d174d;
+    border-color: rgba(236,72,153,.3);
+    border-left-color: #db2777;
+}
+[data-theme="light"] .type-badge.badge-despen { background: rgba(16,185,129,.15); color: #065f46; border-color: rgba(16,185,129,.3); }
+[data-theme="light"] .type-badge.badge-ra     { background: rgba(245,158,11,.15);  color: #78350f; border-color: rgba(245,158,11,.3); }
+[data-theme="light"] .type-badge.badge-he     { background: rgba(6,182,212,.15);   color: #155e75; border-color: rgba(6,182,212,.3); }
+[data-theme="light"] .oc-line-down,
+[data-theme="light"] .oc-line-up {
+    background: linear-gradient(to bottom, rgba(100,116,139,.4), rgba(100,116,139,.2));
+}
+[data-theme="light"] .oc-child-col { border-top-color: rgba(100,116,139,.45); }
+[data-theme="light"] .oc-child-col:first-child { border-image: linear-gradient(to right, transparent 50%, rgba(100,116,139,.45) 50%) 1; }
+[data-theme="light"] .oc-child-col:last-child  { border-image: linear-gradient(to right, rgba(100,116,139,.45) 50%, transparent 50%) 1; }
+[data-theme="light"] .oc-toggle {
+    background: rgba(99,102,241,.12);
+    border-color: rgba(99,102,241,.3);
+    color: #4f46e5;
+}
+[data-theme="light"] .oc-toggle:hover { background: rgba(99,102,241,.25); }
+
+/* --- Animaciones --- */
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-12px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes shimmer {
+    0%   { background-position: -200% 0; }
+    100% { background-position:  200% 0; }
+}
+
+/* ============================================================
+   ÁRBOL HORIZONTAL
+   Cada nodo (.oc-node-wrap) tiene:
+     card → toggle → oc-collapse-wrap → oc-children-row
+   La fila de hijos (.oc-children-row) usa flex-row.
+   Cada hijo (.oc-child-col) lleva una línea superior (.oc-line-up)
+   que forma el conector ┬.
+   ============================================================ */
+
+/* --- Contenedor raíz del organigrama --- */
+#orgchart {
+    padding: 24px 48px 48px;
+    /* El árbol toma su ancho natural y se centra dentro del main */
+    display: inline-flex;
+    justify-content: center;
+    min-width: 100%;
+}
+
+/* --- Nodo completo (card + conector + hijos) --- */
+.oc-node-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeInDown 0.4s ease-out both;
+}
+
+/* --- Fila horizontal de hijos --- */
+.oc-children-row {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+/* --- Columna de cada hijo --- */
+.oc-child-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 8px;
+    /* border-top dibuja la línea horizontal en el flujo normal */
+    border-top: 2px solid rgba(148,163,184,0.45);
+}
+/* Primer hijo: línea empieza desde el centro (mitad izquierda vacía) */
+.oc-child-col:first-child {
+    border-image: linear-gradient(to right, transparent 50%, rgba(148,163,184,0.45) 50%) 1;
+}
+/* Último hijo: línea termina en el centro (mitad derecha vacía) */
+.oc-child-col:last-child {
+    border-image: linear-gradient(to right, rgba(148,163,184,0.45) 50%, transparent 50%) 1;
+}
+/* Hijo único: sin línea horizontal */
+.oc-child-col:first-child:last-child {
+    border-top: none;
+}
+
+/* --- Línea vertical de entrada en cada hijo --- */
+.oc-line-up {
+    width: 2px;
+    height: 20px;
+    background: rgba(148,163,184,0.45);
+}
+
+/* --- Línea vertical que baja del card padre hacia los hijos --- */
+.oc-line-down {
+    width: 2px;
+    height: 20px;
+    background: linear-gradient(to bottom, rgba(148,163,184,0.5), rgba(148,163,184,0.25));
+    transition: opacity 0.3s ease;
+}
+
+/* --- Colapsar / Expandir --- */
+.oc-collapse-wrap {
+    overflow: hidden;
+    transition: max-height 0.45s cubic-bezier(0.4,0,0.2,1),
+                opacity    0.35s ease,
+                transform  0.35s ease;
+}
+.oc-collapse-wrap.expanded {
+    max-height: 4000px;
+    opacity: 1;
+    transform: translateY(0);
+}
+.oc-collapse-wrap.collapsed {
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-8px);
+}
+
+/* --- Botón toggle --- */
+.oc-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgba(99,102,241,0.2);
+    border: 1px solid rgba(99,102,241,0.4);
+    color: #a5b4fc;
+    font-size: 9px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.3s;
+    margin: 2px 0;
+    flex-shrink: 0;
+}
+.oc-toggle:hover {
+    background: rgba(99,102,241,0.4);
+}
+.oc-toggle-icon {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+.oc-toggle.rotated .oc-toggle-icon {
+    transform: rotate(-90deg);
+}
+
+/* ============================================================
+   CARDS
+   ============================================================ */
+.oc-card {
+    position: relative;
+    border-radius: 10px;
+    padding: 12px 14px;
+    cursor: pointer;
+    border: 1px solid rgba(148,163,184,0.15);
+    backdrop-filter: blur(6px);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    overflow: hidden;
+        width: 260px;
+}
+
+/* Línea de color en el top */
+.oc-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    border-radius: 10px 10px 0 0;
+    transition: height 0.2s;
+}
+.oc-card:hover {
+    transform: translateY(-2px);
+}
+.oc-card:hover::before { height: 4px; }
+
+/* Nivel 1: más ancho */
+.oc-card.level-1 { width: 340px; padding: 18px 20px; }
+/* Nivel 2: medio */
+.oc-card.level-2 { width: 280px; padding: 14px 16px; }
+/* Nivel 3+: compactos — cubre cualquier profundidad calculada dinámicamente */
+.oc-card.level-3,
+.oc-card.level-4,
+.oc-card.level-5,
+.oc-card.level-6 { width: 250px; padding: 12px 14px; }
+
+/* --- DESPEN – Verde esmeralda --- */
+.oc-card.type-despen {
+    background: linear-gradient(135deg, rgba(16,185,129,.12), rgba(6,78,59,.18));
+    border-color: rgba(16,185,129,.25);
+}
+.oc-card.type-despen::before { background: linear-gradient(90deg,#10b981,#34d399); }
+.oc-card.type-despen:hover   { border-color: rgba(16,185,129,.45); box-shadow: 0 6px 24px rgba(16,185,129,.18); }
+
+/* --- RA → RA – Ámbar --- */
+.oc-card.type-ra {
+    background: linear-gradient(135deg, rgba(245,158,11,.12), rgba(120,53,15,.18));
+    border-color: rgba(245,158,11,.25);
+}
+.oc-card.type-ra::before { background: linear-gradient(90deg,#f59e0b,#fbbf24); }
+.oc-card.type-ra:hover   { border-color: rgba(245,158,11,.45); box-shadow: 0 6px 24px rgba(245,158,11,.18); }
+
+/* --- HE → RA – Cyan --- */
+.oc-card.type-he {
+    background: linear-gradient(135deg, rgba(6,182,212,.12), rgba(8,51,68,.18));
+    border-color: rgba(6,182,212,.25);
+}
+.oc-card.type-he::before { background: linear-gradient(90deg,#06b6d4,#22d3ee); }
+.oc-card.type-he:hover   { border-color: rgba(6,182,212,.45); box-shadow: 0 6px 24px rgba(6,182,212,.18); }
+
+/* Shimmer en cards con cambio */
+.oc-card.has-change::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,.03) 50%, transparent 100%);
+    background-size: 200% 100%;
+    animation: shimmer 3s ease-in-out infinite;
+    pointer-events: none;
+    border-radius: 10px;
+}
+
+/* --- Contenido del card --- */
+.oc-card-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+.oc-title { margin: 0; line-height: 1.35; color: #f1f5f9; }
+.oc-title.lg { font-size: 0.95rem; font-weight: 700; }
+.oc-title.md { font-size: 0.875rem; font-weight: 600; }
+.oc-title.sm { font-size: 0.8rem; font-weight: 500; }
+
+.oc-badges {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 3px;
+    flex-shrink: 0;
+}
+
+.oc-card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    align-items: center;
+}
+
+/* ============================================================
+   BADGES / TAGS
+   ============================================================ */
+.type-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 7px;
+    border-radius: 9999px;
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+.badge-despen { background: rgba(16,185,129,.2); color: #6ee7b7; border: 1px solid rgba(16,185,129,.3); }
+.badge-ra     { background: rgba(245,158,11,.2);  color: #fcd34d; border: 1px solid rgba(245,158,11,.3); }
+.badge-he     { background: rgba(6,182,212,.2);   color: #67e8f9; border: 1px solid rgba(6,182,212,.3); }
+
+.nivel-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 1px 5px;
+    border-radius: 4px;
+    font-size: 0.58rem;
+    font-weight: 600;
+    font-family: monospace;
+    background: rgba(148,163,184,.1);
+    color: #94a3b8;
+    border: 1px solid rgba(148,163,184,.2);
+}
+
+.jefe-tag, .dept-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-size: 0.6rem;
+    font-weight: 500;
+    background: rgba(99,102,241,.12);
+    color: #a5b4fc;
+    border: 1px solid rgba(99,102,241,.2);
+}
+.dept-tag {
+    background: rgba(148,163,184,.1);
+    color: #94a3b8;
+    border-color: rgba(148,163,184,.2);
+}
+
+.change-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-size: 0.6rem;
+    font-weight: 600;
+    background: rgba(139,92,246,.18);
+    color: #c4b5fd;
+    border: 1px solid rgba(139,92,246,.3);
+}
+
+.nuevo-puesto-tag {
+    display: block;           /* ocupa toda la fila para no apilarse con otros tags */
+    width: 100%;
+    padding: 4px 8px;
+    margin-top: 6px;
+    border-radius: 6px;
+    font-size: 0.72rem;       /* más grande que antes */
+    font-weight: 600;
+    line-height: 1.4;
+    background: rgba(236,72,153,.14);
+    color: #f9a8d4;
+    border: 1px solid rgba(236,72,153,.28);
+    /* Pequeño ícono visual a la izquierda via border-left */
+    border-left: 3px solid #ec4899;
+}
+
+/* ============================================================
+   MODAL
+   ============================================================ */
+#modal-overlay { display: none; }
+#modal-overlay.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#modal-overlay.active #modal-content {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.modal-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 7px 0;
+    border-bottom: 1px solid rgba(148,163,184,.1);
+}
+.modal-row:last-child { border-bottom: none; }
+.modal-label { font-size: 0.7rem; color: #64748b; text-transform: uppercase; letter-spacing: .05em; flex-shrink: 0; margin-right: 12px; }
+.modal-value { font-weight: 500; text-align: right; color: #e2e8f0; font-size: 0.82rem; }
+
+/* ============================================================
+   RESPONSIVE  – en móvil el árbol se hace vertical
+   ============================================================ */
+@media (max-width: 640px) {
+    .oc-children-row {
+        flex-direction: column;
+        align-items: center;
+    }
+    /* Reemplazar líneas horizontales por verticales en móvil */
+    .oc-child-col::before { display: none; }
+    .oc-child-col {
+        padding: 0;
+        width: 100%;
+    }
+    .oc-line-up {
+        height: 16px;
+    }
+    .oc-card[class*="level-"] {
+        width: min(96vw, 340px);
+    }
+}
+
+/* ============================================================
+   SCROLLBAR
+   ============================================================ */
+::-webkit-scrollbar        { width: 6px; height: 6px; }
+::-webkit-scrollbar-track  { background: var(--theme-scrollbar-track); }
+::-webkit-scrollbar-thumb  { background: rgba(99,102,241,.3); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(99,102,241,.5); }
+[data-theme="light"] ::-webkit-scrollbar-thumb       { background: rgba(99,102,241,.4); }
+[data-theme="light"] ::-webkit-scrollbar-thumb:hover { background: rgba(99,102,241,.65); }
