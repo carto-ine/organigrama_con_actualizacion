@@ -1,6 +1,5 @@
 // ============================================
 // ORGANIGRAMA SDSGE
-// Datos desde window.ORG_DATA (definido en datos.js)
 // ============================================
 
 // ---- Utilidad: escape seguro para texto en DOM ----
@@ -141,15 +140,28 @@ function buildTree(data, childrenMap) {
 }
 
 // ---- Type helpers ----
+// Casos posibles:
+//   DESPEN + cambio=0 → verde (sin cambio estructura)
+//   HE     + cambio=1 → cyan (honorarios → RA)
+//   RA     + cambio=0 → gris (RA sin cambio)
+//   RA     + cambio=1 → ámbar (RA cambia dentro de RA)
+//   RA/HE  + cambio=2 → naranja (fusión de puestos)
 const TYPE_CONFIG = {
-    DESPEN: { cardClass: 'type-despen', badgeClass: 'badge-despen' },
-    RA:     { cardClass: 'type-ra',     badgeClass: 'badge-ra'     },
-    HE:     { cardClass: 'type-he',     badgeClass: 'badge-he'     },
+    DESPEN:  { cardClass: 'type-despen',  badgeClass: 'badge-despen'  },
+    RA:      { cardClass: 'type-ra',      badgeClass: 'badge-ra'      },
+    HE:      { cardClass: 'type-he',      badgeClass: 'badge-he'      },
+    RA_NONE: { cardClass: 'type-ra-none', badgeClass: 'badge-ra-none' }, // RA sin cambio
+    FUSION:  { cardClass: 'type-fusion',  badgeClass: 'badge-fusion'  }, // fusión cambio=2
 };
+const ALLOWED_TIPOS = new Set(['DESPEN', 'RA', 'HE']);
 function getTypeCfg(node) {
-    return TYPE_CONFIG[node.tipo?.toUpperCase()] ?? TYPE_CONFIG.DESPEN;
+    if (node.cambio === 2) return TYPE_CONFIG.FUSION;
+    if (node.tipo?.toUpperCase() === 'RA' && node.cambio === 0) return TYPE_CONFIG.RA_NONE;
+    const key = node.tipo?.toUpperCase();
+    return (ALLOWED_TIPOS.has(key) ? TYPE_CONFIG[key] : null) ?? TYPE_CONFIG.DESPEN;
 }
 function getChangeLabel(node) {
+    if (node.cambio === 2) return `FUSIÓN`;
     if (node.cambio === 1 && node.donde && node.donde.toUpperCase() !== 'N/A')
         return `${node.tipo.toUpperCase()} → ${node.donde.toUpperCase()}`;
     return null;
@@ -438,5 +450,34 @@ document.addEventListener('DOMContentLoaded', () => {
             document.documentElement.dataset.theme = next;
             syncThemeIcon(next);
         }
+    });
+
+    // ---- Pan / drag para desplazamiento libre del organigrama ----
+    const panEl = document.querySelector('main');
+    let isPanning = false, startX = 0, startY = 0, scrollX = 0, scrollY = 0;
+
+    panEl.addEventListener('mousedown', e => {
+        // Solo paneo si el click NO es sobre una card ni un botón
+        if (e.target.closest('.oc-card, button, a')) return;
+        isPanning = true;
+        startX = e.clientX;
+        startY = e.clientY;
+        scrollX = panEl.scrollLeft;
+        scrollY = panEl.scrollTop;
+        panEl.style.cursor = 'grabbing';
+        panEl.style.userSelect = 'none';
+    });
+
+    window.addEventListener('mousemove', e => {
+        if (!isPanning) return;
+        panEl.scrollLeft = scrollX - (e.clientX - startX);
+        panEl.scrollTop  = scrollY - (e.clientY - startY);
+    });
+
+    window.addEventListener('mouseup', () => {
+        if (!isPanning) return;
+        isPanning = false;
+        panEl.style.cursor = '';
+        panEl.style.userSelect = '';
     });
 });

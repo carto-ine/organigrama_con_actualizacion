@@ -18,9 +18,8 @@
 //   nivel_tabular– clave tabular (XXX si no aplica)
 //   parent_id    – id del nodo padre (vacío solo en la raíz)
 // ============================================
-;(function () {
-    window.__ORG__ = Object.freeze({
-        csv: `id,jerarquia,pertenecia,jefe_directo,puesto_actual,tipo,cambio,donde,nuevo_puesto,nivel_tabular,parent_id
+window.__ORG__ = Object.freeze({
+    csv: `id,jerarquia,pertenecia,jefe_directo,puesto_actual,tipo,cambio,donde,nuevo_puesto,nivel_tabular,parent_id
 1,1,DCE,ojeda,Dirección de Cartografía Electoral,DESPEN,0,N/A,Sin cambio,XXX,
 2,2,SDSGE,benjamín,Subdirección De Desarrollo De Sistemas Geográficos Electorales,DESPEN,0,N/A,Sin cambio,XXX,1
 3,4,DCE,benjamín,Gestora Administrativa,RA,0,N/A,Sin cambio,XXX,1
@@ -41,6 +40,20 @@
 18,5,DDHG,eduardo,Asistente En Supervisión De Información Geográfica Electoral,RA,1,RA,Nuevo Puesto,KA1,11
 19,5,DDHG,erick,Técnico Especialista En Pruebas Usuarias A Sistemas Cartográficos,HE,1,RA,Nuevo Puesto,KC1,12
 20,5,DDHG,erick,Técnico De Aplicaciones Geoelectorales,RA,1,RA,Nuevo Puesto,KA1,12
-21,4,DDHG,arthur,Documentador Y Diseñador UX/UI,HE,1,RA,Nuevo Puesto,KC1,7`
-    });
-})();
+21,4,DDHG,arthur,Documentador Y Diseñador UX/UI,HE,1,RA,Nuevo Puesto,KC1,7
+22,5,DAGG,adan,Programador Middle En Sistemas Cartográficos Elector,HE,1,RA,Subcordinador de Sistemas Geográfico,KC1,13
+23,5,DAGG,adan,Desarrollador De Sistemas Cartográficos De Consulta en Alto Volumen,HE,1,RA,Nuevo Puesto,KC1,13
+24,5,DAGG,adan,Desarrollador De Sistemas Cartográficos De Consulta en Alto Volumen,HE,1,RA,Nuevo Puesto,KC1,13
+25,5,DAGG,adan,Desarrollador De Sistemas Cartográficos De Consulta en Alto Volumen,HE,1,RA,Nuevo Puesto,KC1,13
+26,4,DAGG,gerzain,Asistente en Supervisión de Aplicaciones del Marco Geográfico Elector,RA,1,RA,Nuevo Puesto,KA3,8
+27,4,DAGG,gerzain,Asistente en Supervisión de Infraestructura Tecnologica Cartográfica,RA,1,RA,Nuevo Puesto,KA3,8
+28,4,DAGG,gerzain,Asistente en Supervisión de Infraestructura Tecnologica Cartográfica (HB3 - José Luis),RA,2,RA,Nuevo Puesto,KA3,8
+29,4,DAGG,gerzain,Asistente de Servicios Cartográficos (HB3- Jaime Ruiz C.),RA,2,RA,Nuevo Puesto,KA3,8
+30,4,DDTSG,machado,Especialista en Implementacion de Sistemas Cartográficos,HE,1,RA,Nuevo Puesto,JB1,9
+31,4,DDTSG,machado,Profesional Especializado en Aplicaciones Cartográficas,HE,1,RA,Nuevo Puesto,JC2,9
+32,4,DDTSG,machado,Subcoordinador de Consilta Indígena y Afromexican,HE,1,RA,Nuevo Puesto,LB2,9
+33,4,DDTSG,machado,Especialista en Implementacion de Procesos y Servicios Cartográficos,HE,1,RA,Nuevo Puesto,JC2,9
+34,4,DDTSG,machado,Especialista en Implementacion de Procesos y Servicios Cartográficos,HE,1,RA,Nuevo Puesto,JC2,9
+35,4,DDTSG,machado,Analista de Bases Geográficas Electorales,HE,1,RA,Nuevo Puesto,HC4,9
+36,4,DDTSG,machado,Asistente de Servicios Cartográficos,RA,0,N/A,Sin cambio,HB3,9`
+});

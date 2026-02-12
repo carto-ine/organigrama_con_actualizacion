@@ -139,9 +139,13 @@ body {
     border-color: rgba(236,72,153,.3);
     border-left-color: #db2777;
 }
-[data-theme="light"] .type-badge.badge-despen { background: rgba(16,185,129,.15); color: #065f46; border-color: rgba(16,185,129,.3); }
-[data-theme="light"] .type-badge.badge-ra     { background: rgba(245,158,11,.15);  color: #78350f; border-color: rgba(245,158,11,.3); }
-[data-theme="light"] .type-badge.badge-he     { background: rgba(6,182,212,.15);   color: #155e75; border-color: rgba(6,182,212,.3); }
+[data-theme="light"] .type-badge.badge-despen  { background: rgba(16,185,129,.15);  color: #065f46; border-color: rgba(16,185,129,.3); }
+[data-theme="light"] .type-badge.badge-ra      { background: rgba(245,158,11,.15);  color: #78350f; border-color: rgba(245,158,11,.3); }
+[data-theme="light"] .type-badge.badge-he      { background: rgba(6,182,212,.15);   color: #155e75; border-color: rgba(6,182,212,.3); }
+[data-theme="light"] .type-badge.badge-ra-none { background: rgba(100,116,139,.15); color: #334155; border-color: rgba(100,116,139,.3); }
+[data-theme="light"] .type-badge.badge-fusion  { background: rgba(249,115,22,.15);  color: #9a3412; border-color: rgba(249,115,22,.3); }
+[data-theme="light"] .oc-card.type-ra-none { background: linear-gradient(135deg, rgba(100,116,139,.08), rgba(51,65,85,.06)); }
+[data-theme="light"] .oc-card.type-fusion  { background: linear-gradient(135deg, rgba(249,115,22,.08), rgba(154,52,18,.06)); }
 [data-theme="light"] .oc-line-down,
 [data-theme="light"] .oc-line-up {
     background: linear-gradient(to bottom, rgba(100,116,139,.4), rgba(100,116,139,.2));
@@ -346,6 +350,22 @@ body {
 .oc-card.type-he::before { background: linear-gradient(90deg,#06b6d4,#22d3ee); }
 .oc-card.type-he:hover   { border-color: rgba(6,182,212,.45); box-shadow: 0 6px 24px rgba(6,182,212,.18); }
 
+/* --- RA sin cambio – Slate/gris --- */
+.oc-card.type-ra-none {
+    background: linear-gradient(135deg, rgba(100,116,139,.12), rgba(51,65,85,.18));
+    border-color: rgba(100,116,139,.25);
+}
+.oc-card.type-ra-none::before { background: linear-gradient(90deg,#64748b,#94a3b8); }
+.oc-card.type-ra-none:hover   { border-color: rgba(100,116,139,.45); box-shadow: 0 6px 24px rgba(100,116,139,.18); }
+
+/* --- Fusión (cambio=2) – Naranja --- */
+.oc-card.type-fusion {
+    background: linear-gradient(135deg, rgba(249,115,22,.12), rgba(154,52,18,.18));
+    border-color: rgba(249,115,22,.25);
+}
+.oc-card.type-fusion::before { background: linear-gradient(90deg,#f97316,#fb923c); }
+.oc-card.type-fusion:hover   { border-color: rgba(249,115,22,.45); box-shadow: 0 6px 24px rgba(249,115,22,.18); }
+
 /* Shimmer en cards con cambio */
 .oc-card.has-change::after {
     content: '';
@@ -398,9 +418,11 @@ body {
     letter-spacing: 0.06em;
     text-transform: uppercase;
 }
-.badge-despen { background: rgba(16,185,129,.2); color: #6ee7b7; border: 1px solid rgba(16,185,129,.3); }
-.badge-ra     { background: rgba(245,158,11,.2);  color: #fcd34d; border: 1px solid rgba(245,158,11,.3); }
-.badge-he     { background: rgba(6,182,212,.2);   color: #67e8f9; border: 1px solid rgba(6,182,212,.3); }
+.badge-despen  { background: rgba(16,185,129,.2);  color: #6ee7b7; border: 1px solid rgba(16,185,129,.3); }
+.badge-ra      { background: rgba(245,158,11,.2);  color: #fcd34d; border: 1px solid rgba(245,158,11,.3); }
+.badge-he      { background: rgba(6,182,212,.2);   color: #67e8f9; border: 1px solid rgba(6,182,212,.3); }
+.badge-ra-none { background: rgba(100,116,139,.2); color: #cbd5e1; border: 1px solid rgba(100,116,139,.3); }
+.badge-fusion  { background: rgba(249,115,22,.2);  color: #fdba74; border: 1px solid rgba(249,115,22,.3); }
 
 .nivel-badge {
     display: inline-flex;

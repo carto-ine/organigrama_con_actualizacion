@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSP: solo permite scripts del mismo origen y del CDN de Tailwind.
-         Bloquea inline scripts, eval y recursos externos no autorizados. -->
+         style-src unsafe-inline: requerido por Tailwind Play CDN (inyecta <style> al DOM). -->
     <meta http-equiv="Content-Security-Policy"
           content="default-src 'self';
                    script-src 'self' https://cdn.tailwindcss.com;
@@ -14,14 +14,8 @@
                    object-src  'none';
                    base-uri    'self';">
     <title>Organigrama SDSGE - Reestructura</title>
-    <!-- Aplicar tema antes del primer render para evitar flash -->
-    <script>
-        (function(){
-            var s = localStorage.getItem('oc-theme');
-            var p = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
-            document.documentElement.dataset.theme = s || p;
-        })();
-    </script>
+    <!-- Aplicar tema antes del primer render para evitar flash (script externo para cumplir CSP) -->
+    <script src="theme-init.js"></script>
     <!-- Tailwind CDN (solo para desarrollo/visualización local).
          Para producción, reemplazar por un build local con: npx tailwindcss build -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -86,11 +80,19 @@
                 <span class="w-2.5 h-2.5 rounded-full bg-pink-500 flex-shrink-0"></span>
                 <span style="color:var(--theme-muted)">Nuevo Puesto — Propuesto</span>
             </div>
+            <div class="theme-legend-item legend-item flex items-center gap-1.5 px-2.5 py-1 rounded-full border text-xs whitespace-nowrap">
+                <span class="w-2.5 h-2.5 rounded-full bg-slate-500 flex-shrink-0"></span>
+                <span style="color:var(--theme-muted)">RA — Sin cambio</span>
+            </div>
+            <div class="theme-legend-item legend-item flex items-center gap-1.5 px-2.5 py-1 rounded-full border text-xs whitespace-nowrap">
+                <span class="w-2.5 h-2.5 rounded-full bg-orange-500 flex-shrink-0"></span>
+                <span style="color:var(--theme-muted)">Fusión — Puestos que se fusionan</span>
+            </div>
         </div>
     </div>
 
     <!-- Org Chart Container -->
-    <main class="w-full px-0 py-6 overflow-x-auto">
+    <main class="w-full px-0 py-6 overflow-x-auto overflow-y-auto" style="max-height:calc(100vh - 130px)">
         <div id="orgchart" class="orgchart-container">
             <!-- Rendered by JS -->
         </div>
@@ -107,7 +109,6 @@
         </div>
     </div>
 
-    <!-- datos.js expone window.__ORG__ con el contenido del CSV -->
     <script src="datos.js"></script>
     <script src="orgchart.js"></script>
 </body>
