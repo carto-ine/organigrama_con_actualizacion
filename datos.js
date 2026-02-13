@@ -56,25 +56,25 @@ window.__ORG__ = Object.freeze({
 34,4,DDTSG,machado,Especialista en Implementacion de Procesos y Servicios Cartográficos,HE,1,RA,Nuevo Puesto,JC2,9
 35,4,DDTSG,machado,Analista de Bases Geográficas Electorales,HE,1,RA,Nuevo Puesto,HC4,9
 36,4,DDTSG,machado,Asistente de Servicios Cartográficos,RA,0,N/A,Sin cambio,HB3,9
-37,2,SAC,Benjamin,Subdirector de Automatización Cartográfica,DESPEN,0,N/A,Sin cambio,XXX,1
-38,4,SAC,Eduardo,Técnica en Validación Gráfica y Alfanumérica,RA,0,RA,Sin cambio,XXX,37
-39,3,DDPC,Eduardo,Jefe de Departamento de Diseño y Producción Cartográfica,DESPEN,0,N/A,Sin cambio,XXX,37
-40,3,DPIR,Eduardo,Jefa de Departamento de Procesamiento de Imágines Raster,DESPEN,1,N/A,Jefa de Departamento de Integración de Catálogos Geoelectorales y Procesamiento de Imágenes Raster,XXX,37
-41,3,DIACCC,Eduardo,Jefa de Departamento de Integración Automatizadade la Cartografía Electoral y Control de Calidad,DESPEN,0,N/A,Sin cambio,XXX,37
-42,4,DDPC,Marco,Asistente de Departamentto de Diseño y Producción Cartográfica,RA,0,RA,Sin cambio,XXX,39
-43,4,DDPC,Marco,Técnica Producción Cartográfica,RA,0,RA,Sin cambio,XXX,39
-44,4,DDPC,Marco,Técnico en Producción Cartográfica,RA,0,RA,Sin cambio,XXX,39
-45,4,DDPC,Marco,Técnico en Producción Cartográfica,RA,0,RA,Sin cambio,XXX,39
-46,4,DDPC,Marco,Analista territorial y Poblacional,RA,0,RA,Sin cambio,XXX,39
-47,4,DIACCC,Carmen,Asistente en Supervisión del Control de Calidad de la Cartografía Electoral,RA,0,RA,Sin cambio,XXX,41
-48,4,DIACCC,Carmen,Técnica en Validación Gráfica y Alfanumérica,RA,0,RA,Sin cambio,XXX,41
-49,4,DIACCC,Carmen,Técnica Producción Cartográfica,RA,1,RA,Técnico en Validación Gráfica y Alfanumérica,XXX,41
-50,4,DIACCC,Carmen,Técnico en Validación Gráfica y Alfanumérica,RA,0,RA,Sin cambio,XXX,41
-51,4,DIACCC,Carmen,Técnico de Producción Cartográfica,RA,1,RA,Técnico en Validación Gráfica y Alfanumérica,XXX,41
-52,4,DPIR,Rosario,Asistente en Supervisión de Imágenes Satelitales,RA,1,RA,Asistente en Supervisión de Catálogos Geoelectorales e Imágenes Raster,XXX,40
-53,4,DPIR,Rosario,Técnica en Procesamiento de imágenes Satelitales,RA,1,RA,Técnica en Validación de Catálogos Geoelectorales y Procesamiento de Imágenes Raster,XXX,40
-54,4,DPIR,Rosario,Técnico en Procesamiento de imágenes Satelitales,RA,1,RA,Técnico en Validación de Catálogos Geoelectorales y Procesamiento de Imágenes  Raster,XXX,40
-55,4,DPIR,Rosario,Técnico en Procesamiento de imágenes Satelitales,RA,1,RA,Técnico en Validación de Catálogos Geoelectorales y Procesamiento de Imágenes  Raster,XXX,40
+37,2,SAC,Benjamin,Subdirector de Automatización Cartográfica,DESPEN,0,N/A,Sin cambio,,1
+38,4,SAC,Eduardo,Técnica en Validación Gráfica y Alfanumérica,RA,0,RA,Sin cambio,,37
+39,3,DDPC,Eduardo,Jefe de Departamento de Diseño y Producción Cartográfica,DESPEN,0,N/A,Sin cambio,,37
+40,3,DPIR,Eduardo,Jefa de Departamento de Procesamiento de Imágenes Raster,DESPEN,1,N/A,Jefa de Departamento de Integración de Catálogos Geoelectorales y Procesamiento de Imágenes Raster,,37
+41,3,DIACCC,Eduardo,Jefa de Departamento de Integración Automatizadade la Cartografía y Control de Calidad,DESPEN,0,N/A,Sin cambio,,37
+42,4,DDPC,Marco,Asistente en supervisión de Producción Cartográfica,RA,0,RA,Sin cambio,,39
+43,4,DDPC,Marco,Técnica en Producción Cartográfica,RA,0,RA,Sin cambio,,39
+44,4,DDPC,Marco,Técnico en Producción Cartográfica,RA,0,RA,Sin cambio,,39
+45,4,DDPC,Marco,Técnico en Producción Cartográfica,RA,0,RA,Sin cambio,,39
+46,4,DDPC,Marco,Analista territorial y Poblacional,RA,0,RA,Sin cambio,,39
+47,4,DIACCC,Carmen,Asistente en Supervisión del Control de Calidad de la Cartografía Electoral,RA,0,RA,Sin cambio,,41
+48,4,DIACCC,Carmen,Técnica en Validación Gráfica y Alfanumérica,RA,0,RA,Sin cambio,,41
+49,4,DIACCC,Carmen,Técnica en Producción Cartográfica,RA,1,RA,Técnica en Validación Gráfica y Alfanumérica,,41
+50,4,DIACCC,Carmen,Técnico en Validación Gráfica y Alfanumérica,RA,0,RA,Sin cambio,,41
+51,4,DIACCC,Carmen,Técnico en Producción Cartográfica,RA,1,RA,Técnico en Validación Gráfica y Alfanumérica,,41
+52,4,DPIR,Rosario,Asistente en Supervisión de Imágenes Satelitales,RA,1,RA,Asistente en Supervisión de Catálogos Geoelectorales e Imágenes Raster,,40
+53,4,DPIR,Rosario,Técnica en Procesamiento de imágenes Satelitales,RA,1,RA,Técnica en Validación de Catálogos Geoelectorales y Procesamiento de Imágenes Raster,,40
+54,4,DPIR,Rosario,Técnico en Procesamiento de imágenes Satelitales,RA,1,RA,Técnico en Validación de Catálogos Geoelectorales y Procesamiento de Imágenes  Raster,,40
+55,4,DPIR,Rosario,Técnico en Procesamiento de imágenes Satelitales,RA,1,RA,Técnico en Validación de Catálogos Geoelectorales y Procesamiento de Imágenes  Raster,,40
 56,5,DDPC,Marco,Especialista en Actualizaciones al Marco Seccional Electoral,HE,1,RA,Analista de Cambios de la Geografía Electoral,HC4,39
 57,5,DDPC,Marco,Programadora de Sistemas de Información Geográfico Electorales,HE,1,RA,Especialista en Desarrollo y Mantenimiento de Sistemas de Información Geográfico Electorales para la generación de Productos Cartográficos,KA3,39
 58,5,DPIR,Rosario,Especialista en Implementación de los Procesos y Servicios Cartográficos,HE,1,RA,Especialista en Implementación de los Procesos y Servicios Cartográficos,JC2,40
