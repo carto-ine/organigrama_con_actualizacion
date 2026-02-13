@@ -29,18 +29,18 @@ window.__ORG__ = Object.freeze({
 7,3,SDSGE,luis,Jefe De Departamento De Desarrollo De Herramientas Geoelectorales,DESPEN,0,N/A,Sin cambio,XXX,2
 8,3,SDSGE,luis,Jefe De Departamento De Aplicación Geodésica Y Geomática,DESPEN,0,N/A,Sin cambio,XXX,2
 9,3,SDSGE,luis,Líder De Migración De Bases Geográficas Digitales,HE,1,RA,Jefe de Departamento de Demarcaciones y SGC,LC4,2
-10,4,DDHG,arthur,Líder De Análisis Y Calidad De Software Cartográfico,HE,1,RA,Coordinador de Sistemas Cloud,LC2,7
-11,4,DDHG,arthur,Líder De Análisis Y Calidad De Software Cartográfico,HE,1,RA,Coodinador de Sistemas Geoespaciales,LC2,7
-12,4,DDHG,arthur,Desarrollador De Sistemas Cartográficos De Consulta en Alto Volumen,HE,1,RA,Coordinador de Integración y Sistemas Transversales,LC2,7
+10,4,DDHG,arthur,Líder De Análisis Y Calidad De Software Cartográfico,HE,1,RA,Coordinador/a Técnico/a de Sistemas Cloud,LC2,7
+11,4,DDHG,arthur,Líder De Análisis Y Calidad De Software Cartográfico,HE,1,RA,Coordinador/a Técnico/a de Sistemas Geoespaciales,LC2,7
+12,4,DDHG,arthur,Desarrollador De Sistemas Cartográficos De Consulta en Alto Volumen,HE,1,RA,Coordinador/a Técnico/a de Integración y Sistemas Transversales,LC2,7
 13,4,DAGG,gerzain,Líder De Análisis Y Calidad De Software Cartográfico,HE,1,RA,Coordinador de Sistemas de Actualización Cartográfica,LC2,8
-14,5,DDHG,javier,Desarrollador De Sistemas Cartográficos De Consulta en Alto Volumen,HE,1,RA,Nuevo Puesto,KC1,10
-15,5,DDHG,javier,Programador Middle En Sistemas Cartográficos Electorales,HE,1,RA,Nuevo Puesto,KC1,10
-16,5,DDHG,javier,Técnico En Desarrollo Y Administración De Base De Datos Geoelectorales,RA,1,RA,Nuevo Puesto,KA1,10
-17,5,DDHG,eduardo,Programador De Sistemas De Información Geográfico Electorales,HE,1,RA,Nuevo Puesto,KC1,11
-18,5,DDHG,eduardo,Asistente En Supervisión De Información Geográfica Electoral,RA,1,RA,Nuevo Puesto,KA1,11
-19,5,DDHG,erick,Técnico Especialista En Pruebas Usuarias A Sistemas Cartográficos,HE,1,RA,Nuevo Puesto,KC1,12
-20,5,DDHG,erick,Técnico De Aplicaciones Geoelectorales,RA,1,RA,Nuevo Puesto,KA1,12
-21,4,DDHG,arthur,Documentador Y Diseñador UX/UI,HE,1,RA,Nuevo Puesto,KC1,7
+14,5,DDHG,javier,Desarrollador De Sistemas Cartográficos De Consulta en Alto Volumen,HE,1,RA,Ingeniero de Software Geoespacial FullStack,KC1,10
+15,5,DDHG,javier,Programador Middle En Sistemas Cartográficos Electorales,HE,1,RA,Ingeniero de Software Geoespacial FullStack,KC1,10
+16,5,DDHG,javier,Técnico En Desarrollo Y Administración De Base De Datos Geoelectorales,RA,1,RA,Líder de Automatización Geoespacial y Calidad de Software,KA3,10
+17,5,DDHG,eduardo,Programador De Sistemas De Información Geográfico Electorales,HE,1,RA,Ingeniero de Software Geoespacial FullStack,KC1,11
+18,5,DDHG,eduardo,Asistente En Supervisión De Información Geográfica Electoral,RA,1,RA,Líder de Automatización Geoespacial y Calidad de Software,KA3,11
+19,5,DDHG,erick,Técnico Especialista En Pruebas Usuarias A Sistemas Cartográficos,HE,1,RA,Ingeniero de Software Geoespacial FullStack,KC1,12
+20,5,DDHG,erick,Técnico De Aplicaciones Geoelectorales,RA,1,RA,Líder de Automatización Geoespacial y Calidad de Software,KA3,12
+21,4,DDHG,arthur,Documentador Y Diseñador UX/UI,HE,1,RA,Ingeniero/a de Diseño de Producto y Servicios cartográficos,KA3,7
 22,5,DAGG,adan,Programador Middle En Sistemas Cartográficos Elector,HE,1,RA,Subcordinador de Sistemas Geográfico,KC1,13
 23,5,DAGG,adan,Desarrollador De Sistemas Cartográficos De Consulta en Alto Volumen,HE,1,RA,Nuevo Puesto,KC1,13
 24,5,DAGG,adan,Desarrollador De Sistemas Cartográficos De Consulta en Alto Volumen,HE,1,RA,Nuevo Puesto,KC1,13
@@ -82,5 +82,38 @@ window.__ORG__ = Object.freeze({
 60,5,DIACCC,Carmen,Supervisor de Actualización del Marco Geoelectoral,HE,1,RA,Supervisor de Actualización del Marco Geoelectoral,HC3,41
 61,5,DIACCC,Carmen,Supervisor de Actualización del Marco Geoelectoral,HE,1,RA,Supervisor de Actualización del Marco Geoelectoral,HC3,41
 62,5,DIACCC,Carmen,Especialista en Actualizaciones al Marco Seccional Electoral,HE,1,RA,Analista de Cambios de la Geografía Electoral,HC4,41
-63,5,DIACCC,Carmen,Profecional Especializado en Servicios de Información Geográfica,HE,1,RA,Analista de Cambios de la Geografía Electoral,HC4,41`
+63,5,DIACCC,Carmen,Profecional Especializado en Servicios de Información Geográfica,HE,1,RA,Analista de Cambios de la Geografía Electoral,HC4,41
+64,2,SACCELT,Benjamín,Subdirectora de Actualización Cartográfica en Campo y Evaluación de Límites Territoriales,DESPEN,0,N/A,Sin cambio,XXX,1
+65,3,DPOAC,Genoveva,Jefa de Departamento de Procedimientos Operativos para la Actualización Cartográfica,DESPEN,0,N/A,Sin cambio,XXX,64
+66,4,DPOAC,Blanca,Asistente en Supervisión de Normatividad y Análisis Técnico Seccional,RA,1,RA,Cambia nombre de puesto: Supervisor de Aplicación Normativa Geoelectoral,KA3,65
+67,4,DPOAC,Blanca,Secretaria de Subdirección de área Departamento o Equivalente,RA,1,RA,Analista Normativo de la Cartografía Electoral,HC4,65
+68,4,DPOAC,Blanca,Técnico en Análisis Seccional y Cartografía,RA,1,RA,Analista Normativo de la Cartografía Electoral,HC4,65
+69,4,DPOAC,Blanca,Técnico en Análisis Seccional y Cartografía,RA,1,RA,Analista Normativo de la Cartografía Electoral,HC4,65
+70,4,DPOAC,Blanca,Técnico en Análisis Seccional y Cartografía,RA,1,RA,Analista Normativo de la Cartografía Electoral,HC4,65
+71,4,DPOAC,Blanca,Técnico en Análisis Seccional y Cartografía,RA,1,RA,Analista Normativo de la Cartografía Electoral,HC4,65
+72,4,DPOAC,Blanca,Auxiliar Técnico en Marco Geoelectoral,RA,1,RA,Analista Auxiliar de la Cartografía Electoral,HB3,65
+73,4,DPOAC,Blanca,Auxiliar de Oficina y Archivo,RA,0,RA,Sin cambio,HB3,65
+74,4,DPOAC,Blanca,Especialista de Servicios de Información Geográfica,HE,1,RA,Analista de Evaluación de la Cartografía Electoral,JB1,65
+75,4,DPOAC,Blanca,Profesional Especializado en Servicios de Información Geográfica,HE,1,RA,Analista de Cambios de la Geografía Electoral,HC4,65
+76,4,DPOAC,Blanca,Especialista en Actualizaciones al Marco Seccional Electoral,HE,1,RA,Analista de Cambios de la Geografía Electoral,HC4,65
+77,4,DPOAC,Blanca,Especialista en Actualizaciones al Marco Seccional Electoral,HE,1,RA,Analista de Cambios de la Geografía Electoral,HC4,65
+78,4,DPOAC,Blanca,Especialista en Actualizaciones al Marco Seccional Electoral,HE,1,RA,Analista de Cambios de la Geografía Electoral,HC4,65
+79,4,DPOAC,Blanca,Especialista en Actualizaciones al Marco Seccional Electoral,HE,1,RA,Analista de Cambios de la Geografía Electoral,HC4,65
+80,3,SACCELT,Genoveva,Jefa de Departamento de Evaluación y Seguimiento de los Avances de la Actualización Cartográfica,DESPEN,0,N/A,Sin cambio,LC4,64
+81,4,DESAAC,Gloria,Especialista en Implementación de los Procesos y Servicios Cartográficos,HE,1,RA,Especialista en Implementación de los Procesos y Servicios Cartográficos,JC2,80
+82,4,DESAAC,Gloria,Especialista de Servicios de Información Geográfica,HE,1,RA,Analista de Evaluación de la Cartografía Electoral,JB1,80
+83,4,DESAAC,Gloria,Especialista de Servicios de Información Geográfica,HE,1,RA,Analista de Evaluación de la Cartografía Electoral,JB1,80
+84,4,DESAAC,Gloria,Asistente en Supervisión de Actualización Cartográfica,RA,0,RA,Supervisor de Gestión y Actualización Cartográfica,KA3,80
+85,5,DESAAC,Gloria,Técnica en Reimpresión y Retiro de Credenciales,RA,1,RA,Analista de Información Cartográfica,HC4,84
+86,5,DESAAC,Gloria,Técnico en Mapoteca,RA,1,RA,Técnico en Cartografía y Análisis Territorial,HC4,84
+87,5,DESAAC,Gloria,Técnico en Mapoteca,RA,1,RA,Técnico en Cartografía y Análisis Territorial,HC4,84
+88,5,DESAAC,Gloria,Técnico en Mapoteca,RA,0,RA,Sin cambio,HB3,84
+89,5,DESAAC,Gloria,Técnico en Mapoteca,RA,0,RA,Sin cambio,HB3,84
+90,3,DAMGAT,Genoveva,Jefe De Departamento De Análisis Del Marco Geográfico Y Adecuación Territorial,DESPEN,0,N/A,Sin cambio,XXX,64
+91,4,DAMGAT,Julian Ernesto,Asistente En Supervisión De Aplicaciones Del Marco Geográfico Electoral,RA,1,RA,Asistente En Supervisión De Información Geográfica Electoral,KA3,90
+92,4,DAMGAT,Julian Ernesto,Técnico En Marco Geoelectoral,RA,1,RA,Asistente En Supervisión De Información Geográfica Electoral,KA3,90
+93,4,DAMGAT,Julian Ernesto,Técnico En Marco Geoelectoral,RA,0,N/A,Sin Cambio,HB3,90
+94,4,DAMGAT,Julian Ernesto,Auxiliar En Seguimiento Y Control De Información Cartográfica,RA,1,RA,Técnico En Marco Geoelectoral,HB3,90
+95,4,DAMGAT,Julian Ernesto,Profesional Especializado En Servicios De Información Geográfica,HE,1,RA,Analista de Cambios de la Geografía Electoral,HC4,90
+96,4,DAMGAT,Julian Ernesto,Especialista En Actualizaciones Al Marco Seccional Electoral,HE,1,RA,Analista de Cambios de la Geografía Electoral,HC4,90`
 });
