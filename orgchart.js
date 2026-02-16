@@ -152,8 +152,9 @@ const TYPE_CONFIG = {
     HE:      { cardClass: 'type-he',      badgeClass: 'badge-he'      },
     RA_NONE: { cardClass: 'type-ra-none', badgeClass: 'badge-ra-none' }, // RA sin cambio
     FUSION:  { cardClass: 'type-fusion',  badgeClass: 'badge-fusion'  }, // fusión cambio=2
+    NC:      { cardClass: 'type-nc',      badgeClass: 'badge-nc'      }, // nueva creación
 };
-const ALLOWED_TIPOS = new Set(['DESPEN', 'RA', 'HE']);
+const ALLOWED_TIPOS = new Set(['DESPEN', 'RA', 'HE', 'NC']);
 function getTypeCfg(node) {
     if (node.cambio === 2) return TYPE_CONFIG.FUSION;
     if (node.tipo?.toUpperCase() === 'RA' && node.cambio === 0) return TYPE_CONFIG.RA_NONE;

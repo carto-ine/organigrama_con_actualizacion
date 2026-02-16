@@ -41,21 +41,21 @@ window.__ORG__ = Object.freeze({
 19,5,DDHG,erick,Técnico Especialista En Pruebas Usuarias A Sistemas Cartográficos,HE,1,RA,Ingeniero de Software Geoespacial FullStack,KC1,12
 20,5,DDHG,erick,Técnico De Aplicaciones Geoelectorales,RA,1,RA,Líder de Automatización Geoespacial y Calidad de Software,KA3,12
 21,4,DDHG,arthur,Documentador Y Diseñador UX/UI,HE,1,RA,Ingeniero/a de Diseño de Producto y Servicios cartográficos,KA3,7
-22,5,DAGG,adan,Programador Middle En Sistemas Cartográficos Elector,HE,1,RA,Subcordinador de Sistemas Geográfico,KC1,13
+22,5,DAGG,adan,Programador Middle En Sistemas Cartográficos Electorales,HE,1,RA,Subcordinador de Sistemas Geográfico,KC1,13
 23,5,DAGG,adan,Desarrollador De Sistemas Cartográficos De Consulta en Alto Volumen,HE,1,RA,Nuevo Puesto,KC1,13
 24,5,DAGG,adan,Desarrollador De Sistemas Cartográficos De Consulta en Alto Volumen,HE,1,RA,Nuevo Puesto,KC1,13
 25,5,DAGG,adan,Desarrollador De Sistemas Cartográficos De Consulta en Alto Volumen,HE,1,RA,Nuevo Puesto,KC1,13
-26,4,DAGG,gerzain,Asistente en Supervisión de Aplicaciones del Marco Geográfico Elector,RA,1,RA,Nuevo Puesto,KA3,8
+26,4,DAGG,gerzain,Asistente en Supervisión de Aplicaciones del Marco Geográfico Electoral,RA,1,RA,Nuevo Puesto,KA3,8
 27,4,DAGG,gerzain,Asistente en Supervisión de Infraestructura Tecnologica Cartográfica,RA,1,RA,Nuevo Puesto,KA3,8
 28,4,DAGG,gerzain,Asistente en Supervisión de Infraestructura Tecnologica Cartográfica (HB3 - José Luis),RA,2,RA,Nuevo Puesto,KA3,8
 29,4,DAGG,gerzain,Asistente de Servicios Cartográficos (HB3- Jaime Ruiz C.),RA,2,RA,Nuevo Puesto,KA3,8
-30,4,DDTSG,machado,Especialista en Implementacion de Sistemas Cartográficos,HE,1,RA,Nuevo Puesto,JB1,9
-31,4,DDTSG,machado,Profesional Especializado en Aplicaciones Cartográficas,HE,1,RA,Nuevo Puesto,JC2,9
-32,4,DDTSG,machado,Subcoordinador de Consilta Indígena y Afromexican,HE,1,RA,Nuevo Puesto,LB2,9
-33,4,DDTSG,machado,Especialista en Implementacion de Procesos y Servicios Cartográficos,HE,1,RA,Nuevo Puesto,JC2,9
-34,4,DDTSG,machado,Especialista en Implementacion de Procesos y Servicios Cartográficos,HE,1,RA,Nuevo Puesto,JC2,9
-35,4,DDTSG,machado,Analista de Bases Geográficas Electorales,HE,1,RA,Nuevo Puesto,HC4,9
-36,4,DDTSG,machado,Asistente de Servicios Cartográficos,RA,0,N/A,Sin cambio,HB3,9
+30,4,DDTSG,machado,Especialista en Implementacion de Sistemas Cartográficos,HE,1,RA,Coordinador del Sistema de Gestión de la Calidad,JB1,9
+31,5,DDTSG,machado,Profesional Especializado en Aplicaciones Cartográficas,HE,1,RA,Especialista en Análisis Geográfico y Modelado Territorial,JC2,30
+32,4,DDTSG,machado,Subcoordinador de Consulta Indígena y Afromexican,HE,1,RA,Coordinador de Distritación y Análisis Geoespacial,LB2,9
+33,5,DDTSG,machado,Especialista en Implementacion de Procesos y Servicios Cartográficos,HE,1,RA,Analista de Indicadores y Evaluación del Desempeño,JC2,32
+34,5,DDTSG,machado,Especialista en Implementacion de Procesos y Servicios Cartográficos,HE,1,RA,Analista de Control Documental y Auditoría Interna,JC2,32
+35,5,DDTSG,machado,Asistente de Servicios Cartográficos,RA,0,RA,Analista de Validación Territorial y Normativa,HC4,32
+36,5,DDTSG,machado,Técnica en Procesamiento de Información Cartográfica,RA,0,RA,Especialista en Cartografía y Gestión de Datos Geoespaciales,,32
 37,2,SAC,Benjamin,Subdirector de Automatización Cartográfica,DESPEN,0,N/A,Sin cambio,,1
 38,4,SAC,Eduardo,Técnica en Validación Gráfica y Alfanumérica,RA,0,RA,Sin cambio,,37
 39,3,DDPC,Eduardo,Jefe de Departamento de Diseño y Producción Cartográfica,DESPEN,0,N/A,Sin cambio,,37
@@ -115,5 +115,14 @@ window.__ORG__ = Object.freeze({
 93,4,DAMGAT,Julian Ernesto,Técnico En Marco Geoelectoral,RA,0,N/A,Sin Cambio,HB3,90
 94,4,DAMGAT,Julian Ernesto,Auxiliar En Seguimiento Y Control De Información Cartográfica,RA,1,RA,Técnico En Marco Geoelectoral,HB3,90
 95,4,DAMGAT,Julian Ernesto,Profesional Especializado En Servicios De Información Geográfica,HE,1,RA,Analista de Cambios de la Geografía Electoral,HC4,90
-96,4,DAMGAT,Julian Ernesto,Especialista En Actualizaciones Al Marco Seccional Electoral,HE,1,RA,Analista de Cambios de la Geografía Electoral,HC4,90`
+96,4,DAMGAT,Julian Ernesto,Especialista En Actualizaciones Al Marco Seccional Electoral,HE,1,RA,Analista de Cambios de la Geografía Electoral,HC4,90
+97,2,SAIEDG,benjamín,Subdirección de Inteligencia Artificial y Estrategia de Datos Geoespaciales,NC,1,RA,,PA3,1
+98,3,SAIEDG,,Jefatura de Departamento de Geociencia de Datos,NC,1,RA,,LC4,97
+99,3,SAIEDG,,Jefatura de Departamento de Aprendizaje Automático Geoespacial,NC,1,RA,,LC4,97
+100,4,DGD,,Ingeniero/a de Procesamiento de Datos Geoespaciales,NC,1,RA,,LC3,98
+101,4,DGD,,Ingeniero/a de Procesamiento de Datos Geoespaciales,NC,1,RA,,LC3,98
+102,4,DGD,,Analista de Modelado de Lenguaje Natural,NC,1,RA,,LC3,98
+103,4,DAAG,,Ingeniero/a de Implementación y Despliegue de IA,NC,1,RA,,LC3,99
+104,4,DAAG,,Ingeniero/a de Implementación y Despliegue de IA,NC,1,RA,,LC3,99
+105,4,DAAG,,Analista de Visión Computacional y Análisis Territorial,NC,1,RA,,LC3,99`
 });

@@ -144,8 +144,10 @@ body {
 [data-theme="light"] .type-badge.badge-he      { background: rgba(6,182,212,.15);   color: #155e75; border-color: rgba(6,182,212,.3); }
 [data-theme="light"] .type-badge.badge-ra-none { background: rgba(100,116,139,.15); color: #334155; border-color: rgba(100,116,139,.3); }
 [data-theme="light"] .type-badge.badge-fusion  { background: rgba(249,115,22,.15);  color: #9a3412; border-color: rgba(249,115,22,.3); }
+[data-theme="light"] .type-badge.badge-nc      { background: rgba(139,92,246,.15);  color: #5b21b6; border-color: rgba(139,92,246,.3); }
 [data-theme="light"] .oc-card.type-ra-none { background: linear-gradient(135deg, rgba(100,116,139,.08), rgba(51,65,85,.06)); }
 [data-theme="light"] .oc-card.type-fusion  { background: linear-gradient(135deg, rgba(249,115,22,.08), rgba(154,52,18,.06)); }
+[data-theme="light"] .oc-card.type-nc      { background: linear-gradient(135deg, rgba(139,92,246,.08), rgba(76,29,149,.06)); }
 [data-theme="light"] .oc-line-down,
 [data-theme="light"] .oc-line-up {
     background: linear-gradient(to bottom, rgba(100,116,139,.4), rgba(100,116,139,.2));
@@ -357,6 +359,15 @@ body {
 }
 .oc-card.type-ra-none::before { background: linear-gradient(90deg,#64748b,#94a3b8); }
 .oc-card.type-ra-none:hover   { border-color: rgba(100,116,139,.45); box-shadow: 0 6px 24px rgba(100,116,139,.18); }
+
+/* --- Nueva Creación (NC) – Violeta --- */
+.oc-card.type-nc {
+    background: linear-gradient(135deg, rgba(139,92,246,.12), rgba(76,29,149,.18));
+    border-color: rgba(139,92,246,.25);
+}
+.oc-card.type-nc::before { background: linear-gradient(90deg,#8b5cf6,#a78bfa); }
+.oc-card.type-nc:hover   { border-color: rgba(139,92,246,.45); box-shadow: 0 6px 24px rgba(139,92,246,.18); }
+.badge-nc { background: rgba(139,92,246,.2); color: #c4b5fd; border: 1px solid rgba(139,92,246,.3); }
 
 /* --- Fusión (cambio=2) – Naranja --- */
 .oc-card.type-fusion {
